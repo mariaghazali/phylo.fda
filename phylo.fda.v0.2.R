@@ -287,6 +287,8 @@ class = "phylo.fda")
 obj$confusion <- confusion(predict(obj), fg)
 obj$prd <- predict(obj)
 obj$g <- as.factor(grp)
+obj$DATA <- DATA # add DATA to obj output, that is needed for predict.phylo.fda(obj, newdata=obj$DATA, type="variates"). 
+                #Otherwise error about absence of Intercept appear
 obj$val <- val
 obj$rss <- sum(diag(rss))
 obj$intercept <- intercept
