@@ -488,7 +488,7 @@ obj
   
   for(i in 1:segnum){
     lambdaval <- lambdalist[i]
-    rss <- phylo.RSS(X,grps,mytree,val=lambdaval)
+    rss <- phylo.RSS(measurements,grps,mytree,val=lambdaval)
     rslt[i,] <- c(lambdaval,rss$RSS) 
   }
   
